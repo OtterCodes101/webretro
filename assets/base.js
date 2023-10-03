@@ -117,7 +117,7 @@ var allCores = Object.keys(systems);
 var allSystems = Object.keys(fileExts);
 var allFileExts = Array.from(new Set(Object.values(fileExts).filter(i => i).join(", ").split(", "))).join(", ");
 var systemsExperimentalFormat = Object.fromEntries(Object.values(systems).map(i => [i, allCores.filter(j => systems[j] == i)]));
-var installedCores = ["a5200", "freechaf", "freeintv", "prboom", "gearcoleco", "genesis_plus_gx", "gw", "handy", "mednafen_ngp", "mednafen_psx_hw", "mednafen_vb", "mednafen_wswan", "melonds", "mgba", "mupen64plus_next", "neocd", "nestopia", "o2em", "opera", "parallel_n64", "prosystem", "snes9x", "stella2014", "vecx", "virtualjaguar", "yabause"];
+var installedCores = ["a5200", "freechaf", "freeintv", "mame2003_plus", "prboom", "gearcoleco", "genesis_plus_gx", "gw", "handy", "mednafen_ngp", "mednafen_psx_hw", "mednafen_vb", "mednafen_wswan", "melonds", "mgba", "mupen64plus_next", "neocd", "nestopia", "o2em", "opera", "parallel_n64", "prosystem", "snes9x", "stella2014", "vecx", "virtualjaguar", "yabause"];
 var installedSystems = allSystems.filter(i => installedCores.some(j => allCores.filter(k => systems[k] == i).includes(j)));
 var installedFileExts = installedSystems.map(i => fileExts[i]).filter(i => i).join(", ");
 var coreGithub = document.getElementById("coregithub");
